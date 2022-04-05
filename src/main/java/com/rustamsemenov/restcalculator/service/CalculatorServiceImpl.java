@@ -25,12 +25,7 @@ public class CalculatorServiceImpl implements CalculatorService {
 
     @Override
     public BigDecimal division(BigDecimal dividend, BigDecimal divider) {
-        BigDecimal divideResult = null;
-        try {
-            divideResult = dividend.divide(divider, RoundingMode.HALF_EVEN);
-        } catch (ArithmeticException e) {
-            System.out.println("can't divide by zero");
-        }
-        return divideResult;
+
+        return dividend.divide(divider, 4,  RoundingMode.HALF_EVEN);
     }
 }
