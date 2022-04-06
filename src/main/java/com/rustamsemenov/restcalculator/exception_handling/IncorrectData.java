@@ -1,16 +1,10 @@
 package com.rustamsemenov.restcalculator.exception_handling;
 
+import lombok.Data;
+
+@Data
 public class IncorrectData {
-    private  String info;
 
-    public IncorrectData() {
-    }
+    private String info;
 
-    public String getInfo() {
-        return info;
-    }
-
-    public void setInfo(String info) {
-        this.info = info;
-    }
 }
